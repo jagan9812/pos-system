@@ -1,0 +1,18 @@
+{
+  "name": "vanitha-pos",
+  "version": "1.0.0",
+  "description": "Cross-platform POS system for Vanitha Grocery - iOS, Web, and Desktop",
+  "main": "backend/src/server.ts",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../web && npm install && cd ../desktop && npm install && cd ../mobile && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:web\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:web": "cd web && npm start",
+    "dev:desktop": "cd desktop && npm start",
+    "dev:mobile": "cd mobile && npm run ios",
+    "build:all": "npm run build:backend && npm run build:web && npm run build:desktop && npm run build:mobile"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
